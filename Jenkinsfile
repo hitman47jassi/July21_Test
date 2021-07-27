@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     
-    FILES_DIR = '/Folder_1'
+    
     stages {
         stage('Start') {
             steps {
@@ -20,6 +20,7 @@ pipeline {
          stage('Read_FileData') {
              environment {
                  def TMP_FILENAME = "";
+                 FILES_DIR = '/Folder_1'
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                  
             }
