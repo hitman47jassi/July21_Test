@@ -22,7 +22,7 @@ pipeline {
          stage('Read_FileData') {
              environment {
                  def TMP_FILENAME = "";
-                 FILES_DIR = './Folder_1'
+                 FILES_DIR = 'Folder_1/ReadListofFiles'
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 
             }
@@ -36,8 +36,8 @@ pipeline {
                 //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
                 script {
-                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
-                    console.log("testtest");
+                  def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
+                   
                 }
                 //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 //sh "rm -f ${TMP_FILENAME}"
