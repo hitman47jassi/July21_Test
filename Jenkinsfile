@@ -32,7 +32,8 @@ pipeline {
                 echo 'Reading files'                
                 //def TMP_FILENAME = "";
                 sh "pwd"
-                sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
+                sh 'ls -alrt'
+                //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
                 script {
                   def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
