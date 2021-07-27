@@ -17,17 +17,16 @@ pipeline {
         }
          stage('Read_FileData') {
             steps {
-                echo 'Reading files'
-                
-                    def TMP_FILENAME = ".docker_files_list"
-                    sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
-                    def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
-                    sh "rm -f ${TMP_FILENAME}"
+                echo 'Reading files'                
+                def TMP_FILENAME = ".docker_files_list"
+                sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
+                def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
+                sh "rm -f ${TMP_FILENAME}"
 
-                    for (int i = 0; i < filenames.size(); i++) {
-                        def filename = filenames[i]
-                        echo "${filename}"
-                    }
+                for (int i = 0; i < filenames.size(); i++) {
+                def filename = filenames[i]
+                echo "${filename}"
+                }
             }
         }
     }
