@@ -7,6 +7,7 @@ pipeline {
         stage('Start') {
             steps {
                 echo 'Hello World -from GIT'
+                 echo '--------------------------------------------------------'
             }
         }
         
@@ -23,7 +24,7 @@ pipeline {
                  def TMP_FILENAME = "";
                  FILES_DIR = './Folder_1'
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
-                 echo '--------------------------------------------------------'
+                
             }
              
              
