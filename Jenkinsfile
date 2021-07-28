@@ -38,7 +38,9 @@ pipeline {
                 sh """
                 #!/bin/bash
                 cd ${FILES_DIR}
-                ls -l 
+                ls -l
+                num1 = 10
+                num2 = 20
                 """
                 
 
