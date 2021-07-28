@@ -30,11 +30,17 @@ pipeline {
              
             steps {
                 echo 'Reading files'
-                echo 'Path is ${FILES_DIR}'
+                echo 'Path is '${FILES_DIR}
                 //def TMP_FILENAME = "";
-                sh "pwd"
-                sh "cd ${FILES_DIR}"
-                sh 'ls -alrt'
+                
+                sh """ 
+                #!/bin/bash
+                cd ${FILES_DIR}
+                ls -l
+                
+                """
+                
+
                 //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
               
