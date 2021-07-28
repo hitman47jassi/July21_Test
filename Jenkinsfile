@@ -22,7 +22,7 @@ pipeline {
          stage('Read_FileData') {
              environment {
                  def TMP_FILENAME = "";
-                 FILES_DIR = '/var/lib/jenkins/workspace/Folder_1/ReadListofFiles'
+                 FILES_DIR = '/var/lib/jenkins/workspace/Folder_1/ReadListofFiles/Folder_1'
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 
             }
