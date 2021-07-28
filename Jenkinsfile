@@ -23,6 +23,8 @@ pipeline {
              environment {
                  def TMP_FILENAME = "";
                  FILES_DIR = '/var/lib/jenkins/workspace/Folder_1/ReadListofFiles/Folder_1'
+                 number1 = "5"
+                 number2 = "10"
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 
             }
@@ -37,6 +39,8 @@ pipeline {
                 #!/bin/bash
                 cd ${FILES_DIR}
                 ls -l
+                sum = ${number1} + ${number2}
+                echo "SUM = ${sum}"
                 
                 """
                 
