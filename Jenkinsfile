@@ -37,10 +37,10 @@ pipeline {
                 sh 'ls -alrt'
                 //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
-                script {
-                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
+              
+              
                    
-                }
+              
                 //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 //sh "rm -f ${TMP_FILENAME}"
 
