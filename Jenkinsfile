@@ -39,10 +39,10 @@ pipeline {
                 #!/bin/bash
                 cd ${FILES_DIR}
                 ls -l
-                number1 = 5
-                number2 = 10
-                sum = $number1 + $number2
-                echo "SUM = $sum"
+                var1=10
+                var2=20
+                sum=$(($var1 + $var2))
+                echo $sum
                 
                 """
                 
