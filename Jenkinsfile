@@ -1,3 +1,13 @@
+def testfn(){
+
+echo "This is a test fn"
+}
+
+
+
+
+
+
 pipeline {
     agent any
 
@@ -20,43 +30,13 @@ pipeline {
             }
         }
          stage('Read_FileData') {
-             environment {
-                 def TMP_FILENAME = "";
-                 FILES_DIR = '/var/lib/jenkins/workspace/Folder_1/ReadListofFiles/Folder_1'
-                 // number1 = "5"
-                 //number2 = "10"
-                 //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
-                
-            }
-             
              
             steps {
-                echo 'Reading files'
-                echo "Path is ${FILES_DIR}"
-                //def TMP_FILENAME = "";
                 
-                sh """
-                #!/bin/bash
-                cd ${FILES_DIR}
-                ls -l
-                num1 = 10
-                num2 = 20
-                """
-                
-
-                //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
-                
-              
-              
-                   
-              
-                //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
-                //sh "rm -f ${TMP_FILENAME}"
-
-                //for (int i = 0; i < filenames.size(); i++) {
-                //def filename = filenames[i];
-                //echo "${filename}"
-                //}
+                echo "script is after this"
+                script{
+                    testfn();
+                }
                 
                 echo '--------------------------------------------------------'
             }
