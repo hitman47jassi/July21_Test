@@ -35,15 +35,10 @@ pipeline {
                 echo "Path is ${FILES_DIR}"
                 //def TMP_FILENAME = "";
                 
-                sh """ 
+                sh """
                 #!/bin/bash
                 cd ${FILES_DIR}
-                ls -l
-                var1=10
-                var2=20
-                sum=$(($var1 + $var2))
-                echo $sum
-                
+                ls -l 
                 """
                 
 
