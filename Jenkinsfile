@@ -38,7 +38,7 @@ pipeline {
                 //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
                 script {
-                  def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
+                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                    
                 }
                 //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
