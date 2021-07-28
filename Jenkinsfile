@@ -30,7 +30,7 @@ pipeline {
              
             steps {
                 echo 'Reading files'
-                echo 'Path is '${FILES_DIR}
+                echo "Path is ${FILES_DIR}"
                 //def TMP_FILENAME = "";
                 
                 sh """ 
