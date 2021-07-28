@@ -22,16 +22,18 @@ pipeline {
          stage('Read_FileData') {
              environment {
                  def TMP_FILENAME = "";
-                 FILES_DIR = 'Folder_1/ReadListofFiles'
+                 FILES_DIR = '/var/lib/jenkins/workspace/Folder_1/ReadListofFiles'
                  //def filenames = readFile(TMP_FILENAME).split( "\\r?\\n" );
                 
             }
              
              
             steps {
-                echo 'Reading files'                
+                echo 'Reading files'
+                echo 'Path is ${FILES_DIR}'
                 //def TMP_FILENAME = "";
                 sh "pwd"
+                sh "cd ${FILES_DIR}"
                 sh 'ls -alrt'
                 //sh "ls ${FILES_DIR} > ${TMP_FILENAME}"
                 
