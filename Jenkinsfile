@@ -1,6 +1,6 @@
 def testfn( test1,  test2){
 
-echo "SUM = $test1 + $test2"
+    echo "SUM = ${test1 + test2}"
 }
 
 
