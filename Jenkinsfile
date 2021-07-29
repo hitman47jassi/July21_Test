@@ -36,7 +36,7 @@ pipeline {
              
             steps {
                 
-                echo "NUM_1 is ${env.NUM_1}"
+                echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
                 script{
                     testfn();
                 }
