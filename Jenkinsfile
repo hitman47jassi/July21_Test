@@ -12,8 +12,15 @@ pipeline {
     agent any
     
     environment {
-        NUM_1 = 1
+        
+        def NUM_1 = 1
+        NUM_2 = 2
     }
+    
+    options {
+        timeout(time: 1, unit: 'MINUTES')
+    }
+    
     
     
     stages {
