@@ -15,7 +15,7 @@ pipeline {
         
         int NUM_1 = "99".toInteger()
         int NUM_2 = "22".toInteger()
-        
+        total = 0
     }
     
     options {
@@ -45,8 +45,7 @@ pipeline {
              
              
             steps {
-                env.total = NUM_1 + NUM_2 
-                echo "${env.total}"
+               
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
                 //${env.total.toInteger()} = ${env.NUM_1.toInteger()} + ${env.NUM_2.toInteger()}
                 sh 'echo THIS IS SH ECHO and total is $total'
