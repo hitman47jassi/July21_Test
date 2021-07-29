@@ -51,7 +51,7 @@ pipeline {
                 script{
                     testfn();
                     
-                    env.total.toInteger()= env.NUM_1.toInteger() + env.NUM_2.toInteger()
+                    env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
                 }
                 
                 echo '--------------------------------------------------------'
