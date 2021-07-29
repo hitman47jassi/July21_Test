@@ -15,6 +15,7 @@ pipeline {
         
         int NUM_1 = 1
         int NUM_2 = 2
+        int total = 0
     }
     
     options {
@@ -44,7 +45,7 @@ pipeline {
             steps {
                 
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
-                total = $NUM_1 + $NUM_2
+                ${env.total} = ${env.NUM_1} + ${env.NUM_2}
                 sh 'echo THIS IS SH ECHO and total is $total'
                 
                 script{
