@@ -15,7 +15,7 @@ pipeline {
         
         int NUM_1 = "99".toInteger()
         int NUM_2 = "22".toInteger()
-        int total = NUM_1 + NUM_2 
+        
     }
     
     options {
@@ -42,6 +42,9 @@ pipeline {
         }
          stage('Read_FileData') {
              
+             int total = NUM_1 + NUM_2 
+             echo "${total}"
+             
             steps {
                 
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
@@ -51,8 +54,8 @@ pipeline {
                 script{
                     
                     
-                    env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
-                    echo "$env.total"
+                    //env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
+                    //echo "$env.total"
                     testfn(env.total);
                 }
                 
