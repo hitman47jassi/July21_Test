@@ -13,8 +13,8 @@ pipeline {
     
     environment {
         
-        int NUM_1 = '1' as Integer
-        int NUM_2 = '2' as Integer
+        int NUM_1 = "99".toInteger()
+        int NUM_2 = "22".toInteger()
         int total = 0
     }
     
