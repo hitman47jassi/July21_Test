@@ -1,6 +1,6 @@
-def testfn(test){
+def testfn(int test1,int test2){
 
-echo "SUM = $test"
+echo "SUM = $test1 + $test2"
 }
 
 
@@ -55,7 +55,7 @@ pipeline {
                     
                     //env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
                     //echo "$env.total"
-                    testfn(env.NUM_1);
+                    testfn(env.NUM_1 , env.NUM_2);
                 }
                 
                 echo '--------------------------------------------------------'
