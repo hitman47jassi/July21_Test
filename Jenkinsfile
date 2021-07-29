@@ -55,7 +55,7 @@ pipeline {
                     
                     //env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
                     //echo "$env.total"
-                    testfn(env.total);
+                    testfn(env.NUM_1);
                 }
                 
                 echo '--------------------------------------------------------'
