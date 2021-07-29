@@ -13,8 +13,8 @@ pipeline {
     
     environment {
         
-        def NUM_1 = 1
-        NUM_2 = 2
+        int NUM_1 = 1
+        int NUM_2 = 2
     }
     
     options {
@@ -44,7 +44,8 @@ pipeline {
             steps {
                 
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
-                sh 'echo THIS IS SH ECHO and num_1 is $NUM_1'
+                sh 'echo THIS IS SH ECHO and SUM is $NUM_1 + $NUM_2'
+                
                 script{
                     testfn();
                 }
