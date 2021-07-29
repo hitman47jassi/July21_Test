@@ -10,7 +10,10 @@ echo "This is a test fn"
 
 pipeline {
     agent any
-
+    
+    environment {
+        NUM_1 = 1
+    }
     
     
     stages {
@@ -33,7 +36,7 @@ pipeline {
              
             steps {
                 
-                echo "script is after this"
+                echo "NUM_1 is ${env.NUM_1}"
                 script{
                     testfn();
                 }
