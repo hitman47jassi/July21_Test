@@ -44,7 +44,7 @@ pipeline {
             steps {
                 
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
-                sh 'echo THIS IS SH ECHO and SUM is $NUM_1 + $NUM_2'
+                sh 'echo THIS IS SH ECHO and SUM is $(NUM_1 + NUM_2)'
                 
                 script{
                     testfn();
