@@ -13,8 +13,8 @@ pipeline {
     
     environment {
         
-        int NUM_1 = 1
-        int NUM_2 = 2
+        int NUM_1 = 1 as int
+        int NUM_2 = 2 as int
         int total = 0
     }
     
