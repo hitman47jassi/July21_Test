@@ -15,7 +15,7 @@ pipeline {
         
         int NUM_1 = "99".toInteger()
         int NUM_2 = "22".toInteger()
-        total = 0
+        total = NUM_1 - NUM_2
     }
     
     options {
