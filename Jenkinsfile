@@ -1,4 +1,4 @@
-def testfn(int test1, int test2){
+def testfn( test1,  test2){
 
 echo "SUM = $test1 and $test2"
 }
