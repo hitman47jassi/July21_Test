@@ -45,7 +45,7 @@ pipeline {
             steps {
                 
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
-                ${env.total} = ${env.NUM_1} + ${env.NUM_2}
+                ${env.total.toInteger()} = ${env.NUM_1.toInteger()} + ${env.NUM_2.toInteger()}
                 sh 'echo THIS IS SH ECHO and total is $total'
                 
                 script{
