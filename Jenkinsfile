@@ -42,11 +42,11 @@ pipeline {
         }
          stage('Read_FileData') {
              
-             int total = NUM_1 + NUM_2 
-             echo "${total}"
+             
              
             steps {
-                
+                def total = NUM_1 + NUM_2 
+                echo "${total}"
                 echo "NUM_1 is ${env.NUM_1} and CLASS is ${env.NUM_1.class}"
                 //${env.total.toInteger()} = ${env.NUM_1.toInteger()} + ${env.NUM_2.toInteger()}
                 sh 'echo THIS IS SH ECHO and total is $total'
