@@ -1,6 +1,6 @@
-def testfn(){
+def testfn(test){
 
-echo "This is a test fn"
+echo "SUM = $test"
 }
 
 
@@ -49,9 +49,10 @@ pipeline {
                 sh 'echo THIS IS SH ECHO and total is $total'
                 
                 script{
-                    testfn();
+                    
                     
                     env.total = env.NUM_1.toInteger() + env.NUM_2.toInteger()
+                    testfn(env.total);
                 }
                 
                 echo '--------------------------------------------------------'
